@@ -1,0 +1,27 @@
+# GitHub Pages Configuration
+# This file helps optimize the site for GitHub Pages deployment
+
+# Enable plugins
+plugins:
+  - jekyll-sitemap
+  - jekyll-seo-tag
+
+# Site settings for SEO
+title: "Andre Fabre - Cybersecurity Consultant"
+description: "Professional cybersecurity consultant helping Perth businesses meet compliance obligations and protect against data breaches."
+url: "https://andrefabre.github.io"
+baseurl: "/the-darkness-portfolio-website"
+
+# Author information
+author:
+  name: "Andre Fabre"
+  email: "andre@andrefabre.com.au"
+
+# Social links
+social:
+  linkedin: "andrefabre"
+  github: "andrefabre"
+
+# SEO settings
+lang: en-AU
+timezone: Australia/Perth
