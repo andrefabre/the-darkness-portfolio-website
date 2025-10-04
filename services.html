@@ -7,17 +7,17 @@
     <meta name="description" content="Professional cybersecurity services for Perth businesses including the Essential Policy Trio and comprehensive security assessments.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
 </head>
-<body>
+<body class="cyber-theme">
     <header>
-        <nav class="navbar">
+        <nav class="cyber-nav">
             <div class="nav-container">
-                <a href="index.html" class="nav-logo">Andre Fabre</a>
+                <a href="index-new.html" class="nav-logo">Andre Fabre</a>
                 <ul class="nav-menu">
                     <li class="nav-item">
-                        <a href="index.html" class="nav-link">Home</a>
+                        <a href="index-new.html" class="nav-link">Home</a>
                     </li>
                     <li class="nav-item">
                         <a href="services.html" class="nav-link active">Services</a>
@@ -35,26 +35,54 @@
                         <a href="https://linkedin.com/in/andrefabre" class="nav-link" target="_blank">LinkedIn</a>
                     </li>
                 </ul>
+                <div class="nav-search">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/>
+                    </svg>
+                </div>
             </div>
         </nav>
     </header>
 
-    <main>
-        <section class="page-hero">
+    <main class="cyber-main">
+        <!-- Services Hero Section -->
+        <section class="cyber-services-hero">
+            <div class="hero-background">
+                <div class="world-map-overlay"></div>
+                <div class="hero-figure">
+                    <div class="cyber-lock-container">
+                        <img src="assets/images/cyber-lock-hero.svg" alt="Cybersecurity Protection" class="cyber-lock-image">
+                    </div>
+                </div>
+            </div>
+            
             <div class="container">
-                <h1>Services for Perth Businesses</h1>
-                <p>Professional cybersecurity solutions tailored for Australian small and medium businesses</p>
+                <div class="hero-content">
+                    <div class="hero-text">
+                        <div class="hero-badge">MY SERVICES</div>
+                        <h1 class="hero-title">
+                            Professional <span class="highlight">Cybersecurity</span><br>
+                            Services
+                        </h1>
+                        <p class="hero-description">
+                            Comprehensive security solutions tailored for Perth businesses. From policy development to risk assessments, protecting your organization at every level.
+                        </p>
+                    </div>
+                </div>
             </div>
         </section>
 
         <!-- Services Section -->
-        <section class="services-section">
+        <section class="cyber-services-main">
             <div class="container">
-                <h2>Professional Services</h2>
+                <h2 class="section-title">Professional Services</h2>
                 
                 <div class="service-card featured">
-                    <h3>The Essential Policy Trio</h3>
-                    <div class="service-price">Fixed Price Service</div>
+                    <div class="service-header">
+                        <h3>The Essential Policy Trio</h3>
+                        <div class="service-price">Fixed Price Service</div>
+                    </div>
+                    
                     <div class="service-description">
                         <p>Build a strong foundation for your business cybersecurity with three critical policies designed specifically for Australian SMBs. This comprehensive package includes professionally crafted Password Policy, Acceptable Use Policy, and Incident Response procedures that not only protect your business but also help you meet compliance requirements under Australian cybersecurity frameworks.</p>
                         
@@ -62,6 +90,7 @@
                         
                         <p>This service helps you meet ACSC Essential Eight guidelines while building the procedural foundation that insurers and regulators expect to see. Perfect for businesses looking to establish robust cybersecurity governance without the complexity of enterprise-level solutions.</p>
                     </div>
+                    
                     <div class="service-features">
                         <h4>What's Included:</h4>
                         <ul>
@@ -73,21 +102,67 @@
                             <li>One-hour consultation for policy customization</li>
                         </ul>
                     </div>
-                    <a href="index.html#contact" class="cta-button">Get Started</a>
+                    
+                    <a href="contact.html" class="btn-primary large">Get Started</a>
+                </div>
+
+                <!-- Additional Services Grid -->
+                <div class="services-grid">
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <svg width="40" height="40" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M12 1L3 5V11C3 16.55 6.84 21.74 12 23C17.16 21.74 21 16.55 21 11V5L12 1M12 7C13.4 7 14.8 8.6 14.8 10V14.5C14.8 16.4 13.4 18 12 18S9.2 16.4 9.2 14.5V10C9.2 8.6 10.6 7 12 7Z"/>
+                            </svg>
+                        </div>
+                        <h3>Security Assessments</h3>
+                        <p>Comprehensive evaluation of your current security posture, identifying vulnerabilities and providing actionable recommendations.</p>
+                    </div>
+
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <svg width="40" height="40" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2M12,4A8,8 0 0,1 20,12A8,8 0 0,1 12,20A8,8 0 0,1 4,12A8,8 0 0,1 12,4M11,16.5L6.5,12L7.91,10.59L11,13.67L16.59,8.09L18,9.5L11,16.5Z"/>
+                            </svg>
+                        </div>
+                        <h3>Compliance Frameworks</h3>
+                        <p>Expert guidance on ACSC Essential Eight and other Australian cybersecurity compliance requirements.</p>
+                    </div>
+
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <svg width="40" height="40" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M13,13H11V7H13M13,17H11V15H13M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2Z"/>
+                            </svg>
+                        </div>
+                        <h3>Incident Response</h3>
+                        <p>Rapid response planning and coordination to minimize damage and restore operations after security incidents.</p>
+                    </div>
+
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <svg width="40" height="40" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M16,6L18.29,8.29L13.41,13.17L9.41,9.17L2,16.59L3.41,18L9.41,12L13.41,16L19.71,9.71L22,12V6H16Z"/>
+                            </svg>
+                        </div>
+                        <h3>Business Consulting</h3>
+                        <p>Strategic cybersecurity advisory services to align security investments with business objectives.</p>
+                    </div>
                 </div>
             </div>
         </section>
 
         <!-- Case Studies Section -->
-        <section class="case-studies-section">
+        <section class="cyber-case-studies">
             <div class="container">
-                <h2>Case Studies</h2>
+                <h2 class="section-title">Case Studies</h2>
                 <p class="section-intro">Real-world examples of how comprehensive cybersecurity assessments protect businesses and families</p>
 
                 <div class="case-study-grid">
-                    <div class="case-study-card interactive">
-                        <h3>Case Study: External Perimeter Quick-Check</h3>
-                        <div class="case-study-type">Business Security Assessment</div>
+                    <div class="case-study-card">
+                        <div class="case-study-header">
+                            <h3>External Perimeter Quick-Check</h3>
+                            <div class="case-study-type">Business Security Assessment</div>
+                        </div>
                         
                         <div class="case-study-content">
                             <div class="problem">
@@ -102,7 +177,7 @@
                             
                             <div class="outcome">
                                 <h4>The Outcome</h4>
-                                <p>The assessment revealed three critical vulnerabilities: misconfigured email authentication records, an outdated web application, and exposed employee information on social media. We provided a prioritized action plan with specific implementation steps. Within two weeks, the client had secured their email systems, updated their web presence, and implemented a social media policy. The business now has confidence in their external security posture and a clear process for ongoing monitoring.</p>
+                                <p>The assessment revealed three critical vulnerabilities: misconfigured email authentication records, an outdated web application, and exposed employee information on social media. We provided a prioritized action plan with specific implementation steps. Within two weeks, the client had secured their email systems, updated their web presence, and implemented a social media policy.</p>
                             </div>
                         </div>
                         
@@ -111,9 +186,11 @@
                         </div>
                     </div>
 
-                    <div class="case-study-card interactive">
-                        <h3>Case Study: The Family Data Footprint Audit</h3>
-                        <div class="case-study-type">Personal Cybersecurity Assessment</div>
+                    <div class="case-study-card">
+                        <div class="case-study-header">
+                            <h3>Family Data Footprint Audit</h3>
+                            <div class="case-study-type">Personal Cybersecurity Assessment</div>
+                        </div>
                         
                         <div class="case-study-content">
                             <div class="problem">
@@ -128,7 +205,7 @@
                             
                             <div class="outcome">
                                 <h4>The Results</h4>
-                                <p>The audit uncovered that family members' passwords had appeared in multiple data breaches, their social media profiles revealed enough information for social engineering attacks, and their home WiFi was using outdated security protocols. We provided a clear, non-technical action plan with step-by-step instructions for securing their digital lives. Six months later, the family reports feeling much more confident about their online safety.</p>
+                                <p>The audit uncovered that family members' passwords had appeared in multiple data breaches, their social media profiles revealed enough information for social engineering attacks, and their home WiFi was using outdated security protocols. We provided a clear, non-technical action plan with step-by-step instructions for securing their digital lives.</p>
                             </div>
                         </div>
                         
@@ -141,16 +218,18 @@
         </section>
 
         <!-- Call to Action Section -->
-        <section class="services-cta">
+        <section class="cyber-services-cta">
             <div class="container">
-                <h2>Ready to Secure Your Business?</h2>
-                <p>Start with a free assessment to understand your current cybersecurity posture and get personalized recommendations.</p>
-                <a href="index.html#how" class="cta-button primary large">Start Your Free Assessment</a>
+                <div class="cta-content">
+                    <h2>Ready to Secure Your Business?</h2>
+                    <p>Start with a free assessment to understand your current cybersecurity posture and get personalized recommendations.</p>
+                    <a href="contact.html" class="btn-primary large">Start Your Free Assessment</a>
+                </div>
             </div>
         </section>
     </main>
 
-    <footer>
+    <footer class="cyber-footer">
         <div class="container">
             <p>&copy; 2025 Andre Fabre. All rights reserved. | Cybersecurity Consultant - Perth, Australia</p>
         </div>
