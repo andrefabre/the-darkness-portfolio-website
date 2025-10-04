@@ -1,4 +1,4 @@
-# Andre Fabre - Cybersecurity Consultant Portfolio
+# Andre Fabre - Cybersecurity Consultant Portfo- **Contact Section**: Multiple ways to connect including LinkedIn (with resume access)io
 
 A professional portfolio website for Andre Fabre, a cybersecurity consultant based in Perth, Australia. This site showcases expertise in cybersecurity risk assessment, compliance, and business security solutions.
 
@@ -25,8 +25,7 @@ GitHub Pages URL: [https://andrefabre.github.io/the-darkness-portfolio-website](
 ├── js/
 │   └── main.js         # Interactive navigation and effects
 ├── assets/
-│   ├── images/         # Professional photos and graphics
-│   └── resume.pdf      # Downloadable resume
+│   └── images/         # Professional photos and graphics
 └── _config.yml         # GitHub Pages configuration
 ```
 
