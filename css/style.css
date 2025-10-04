@@ -2983,3 +2983,986 @@ footer p {
         height: 50px;
     }
 }
+
+/* ================================
+   Cyber About Page Styles
+   ================================ */
+
+/* About Hero Section */
+.cyber-about-hero {
+    min-height: 90vh;
+    position: relative;
+    display: flex;
+    align-items: center;
+    background: linear-gradient(135deg, #0a0a0a 0%, #1a1a2e 100%);
+    overflow: hidden;
+}
+
+.about-hero-content {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    align-items: center;
+    gap: 4rem;
+    width: 100%;
+    position: relative;
+    z-index: 2;
+}
+
+.about-intro {
+    max-width: 600px;
+}
+
+.hero-subtitle {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--cyber-accent, #f59e0b);
+    margin: 1rem 0;
+    line-height: 1.3;
+}
+
+.about-photo-container {
+    position: relative;
+}
+
+.about-photo {
+    width: 300px;
+    height: 400px;
+    border-radius: 12px;
+    overflow: hidden;
+    position: relative;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+    border: 2px solid var(--cyber-accent, #f59e0b);
+}
+
+.about-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.photo-placeholder {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: var(--cyber-accent, #f59e0b);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #1f2937;
+    font-weight: 600;
+    font-size: 1.1rem;
+}
+
+.social-sidebar {
+    position: absolute;
+    right: 2rem;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    z-index: 3;
+}
+
+.social-sidebar a {
+    width: 48px;
+    height: 48px;
+    background: rgba(75, 85, 99, 0.8);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #9ca3af;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.social-sidebar a:hover {
+    background: var(--cyber-accent, #f59e0b);
+    color: #1f2937;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(245, 158, 11, 0.4);
+}
+
+/* About Content Section */
+.cyber-about-content {
+    padding: 80px 0;
+    background: linear-gradient(135deg, #0a0a0a 0%, #1a1a2e 50%, #0a0a0a 100%);
+    position: relative;
+    border-top: 1px solid rgba(255,255,255,0.1);
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
+.about-text {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.about-text p {
+    font-size: 1.125rem;
+    line-height: 1.8;
+    color: var(--cyber-text-light, #d1d5db);
+    margin-bottom: 2rem;
+}
+
+/* Skills Section */
+.cyber-skills-section {
+    padding: 80px 0;
+    background: linear-gradient(135deg, #0a0a0a 0%, #1a1a2e 100%);
+    position: relative;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.skill-card {
+    background: rgba(31, 41, 55, 0.8);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    padding: 2rem;
+    text-align: center;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.skill-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, transparent, var(--cyber-accent, #f59e0b), transparent);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.skill-card:hover::before,
+.skill-card.highlighted::before {
+    opacity: 1;
+}
+
+.skill-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--cyber-accent, #f59e0b);
+    box-shadow: 0 10px 30px rgba(245, 158, 11, 0.2);
+}
+
+.skill-card.highlighted {
+    border-color: var(--cyber-accent, #f59e0b);
+    box-shadow: 0 10px 30px rgba(245, 158, 11, 0.3);
+}
+
+.skill-icon {
+    width: 60px;
+    height: 60px;
+    background: var(--cyber-accent, #f59e0b);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1.5rem;
+    color: #1f2937;
+}
+
+.skill-card h3 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--cyber-text-primary, #ffffff);
+    margin-bottom: 1rem;
+}
+
+.skill-card p {
+    color: var(--cyber-text-light, #d1d5db);
+    line-height: 1.6;
+}
+
+/* Experience Section */
+.cyber-experience-section {
+    padding: 80px 0;
+    background: linear-gradient(135deg, #0a0a0a 0%, #1a1a2e 50%, #0a0a0a 100%);
+    position: relative;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
+.experience-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.experience-item {
+    background: rgba(31, 41, 55, 0.8);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    padding: 2rem;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.experience-item:hover {
+    transform: translateY(-5px);
+    border-color: var(--cyber-accent, #f59e0b);
+    box-shadow: 0 10px 30px rgba(245, 158, 11, 0.2);
+}
+
+.experience-icon {
+    width: 50px;
+    height: 50px;
+    background: var(--cyber-accent, #f59e0b);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1.5rem;
+    color: #1f2937;
+}
+
+.experience-item h3 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--cyber-text-primary, #ffffff);
+    margin-bottom: 1rem;
+}
+
+.experience-item p {
+    color: var(--cyber-text-light, #d1d5db);
+    line-height: 1.6;
+}
+
+/* Responsive About Page */
+@media (max-width: 968px) {
+    .about-hero-content {
+        grid-template-columns: 1fr;
+        text-align: center;
+        gap: 3rem;
+    }
+    
+    .about-photo {
+        width: 250px;
+        height: 320px;
+        margin: 0 auto;
+    }
+    
+    .social-sidebar {
+        position: static;
+        transform: none;
+        flex-direction: row;
+        justify-content: center;
+        margin-top: 2rem;
+    }
+}
+
+@media (max-width: 640px) {
+    .cyber-about-hero {
+        min-height: 80vh;
+        padding: 60px 0;
+    }
+    
+    .skills-grid,
+    .experience-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
+    .skill-card,
+    .experience-item {
+        padding: 1.5rem;
+    }
+    
+    .about-photo {
+        width: 200px;
+        height: 280px;
+    }
+    
+    .social-sidebar a {
+        width: 44px;
+        height: 44px;
+    }
+}
+
+/* ================================
+   Cyber Contact Page Styles
+   ================================ */
+
+/* Contact Hero Section */
+.cyber-contact-hero {
+    min-height: 70vh;
+    position: relative;
+    display: flex;
+    align-items: center;
+    background: linear-gradient(135deg, #0a0a0a 0%, #1a1a2e 100%);
+    overflow: hidden;
+}
+
+/* Contact Hero Specific Layout */
+.cyber-contact-hero .hero-content {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.cyber-contact-hero .hero-text {
+    text-align: center;
+}
+
+.cyber-contact-hero .hero-text .hero-description {
+    margin-bottom: 3rem;
+}
+
+.cyber-contact-hero .contact-info {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(245, 158, 11, 0.2);
+    border-radius: 12px;
+    padding: 2rem;
+    backdrop-filter: blur(10px);
+    margin-top: 2rem;
+    text-align: left;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.cyber-contact-hero .contact-info .section-title {
+    color: #f59e0b;
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+}
+
+.cyber-contact-hero .contact-info .contact-intro {
+    color: #e5e7eb;
+    margin-bottom: 2rem;
+    line-height: 1.6;
+}
+
+.cyber-contact-hero .contact-methods {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 1rem;
+}
+
+.cyber-contact-hero .contact-method {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem;
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 8px;
+    border: 1px solid rgba(245, 158, 11, 0.1);
+    transition: all 0.3s ease;
+}
+
+.cyber-contact-hero .contact-method:hover {
+    background: rgba(245, 158, 11, 0.1);
+    border-color: rgba(245, 158, 11, 0.3);
+    transform: translateX(5px);
+}
+
+.cyber-contact-hero .contact-icon {
+    width: 44px;
+    height: 44px;
+    background: linear-gradient(135deg, #f59e0b, #d97706);
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #000;
+    flex-shrink: 0;
+}
+
+.cyber-contact-hero .contact-details h3 {
+    color: #f59e0b;
+    font-size: 1rem;
+    margin-bottom: 0.25rem;
+    font-weight: 600;
+}
+
+.cyber-contact-hero .contact-details p {
+    color: #e5e7eb;
+    margin: 0;
+}
+
+.cyber-contact-hero .contact-details a {
+    color: #e5e7eb;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.cyber-contact-hero .contact-details a:hover {
+    color: #f59e0b;
+}
+
+/* Contact Section */
+.cyber-contact-section {
+    padding: 80px 0;
+    background: linear-gradient(135deg, #0a0a0a 0%, #1a1a2e 50%, #0a0a0a 100%);
+    position: relative;
+    overflow: hidden;
+}
+
+.cyber-contact-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800"><defs><pattern id="contact-dots" width="40" height="40" patternUnits="userSpaceOnUse"><circle cx="20" cy="20" r="1" fill="rgba(0,212,255,0.1)"/></pattern></defs><rect width="100%" height="100%" fill="url(%23contact-dots)"/></svg>') center/cover;
+    opacity: 0.3;
+}
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: start;
+}
+
+/* Contact Form Wrapper */
+.contact-form-wrapper {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.contact-form .form-intro {
+    color: #9ca3af;
+    margin-bottom: 2rem;
+    line-height: 1.6;
+    text-align: center;
+}
+
+.contact-info {
+    max-width: 500px;
+}
+
+.contact-intro {
+    font-size: 1.125rem;
+    line-height: 1.6;
+    color: var(--cyber-text-light, #d1d5db);
+    margin-bottom: 3rem;
+}
+
+.contact-methods {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.contact-method {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    padding: 1.5rem;
+    background: rgba(31, 41, 55, 0.8);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    transition: all 0.3s ease;
+}
+
+.contact-method:hover {
+    border-color: var(--cyber-accent, #f59e0b);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(245, 158, 11, 0.2);
+}
+
+.contact-method .contact-icon {
+    width: 48px;
+    height: 48px;
+    background: var(--cyber-accent, #f59e0b);
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #1f2937;
+    flex-shrink: 0;
+}
+
+.contact-details h3 {
+    font-size: 1.125rem;
+    font-weight: 600;
+    color: var(--cyber-text-primary, #ffffff);
+    margin-bottom: 0.5rem;
+}
+
+.contact-details p {
+    color: var(--cyber-text-light, #d1d5db);
+    margin: 0;
+}
+
+.contact-details a {
+    color: var(--cyber-accent, #f59e0b);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.contact-details a:hover {
+    color: #fbbf24;
+}
+
+/* Contact Form */
+.contact-form {
+    background: rgba(31, 41, 55, 0.8);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    padding: 2.5rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.contact-form::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, transparent, var(--cyber-accent, #f59e0b), transparent);
+}
+
+.cyber-form .form-group {
+    margin-bottom: 1.5rem;
+}
+
+.cyber-form label {
+    display: block;
+    font-weight: 500;
+    color: var(--cyber-text-primary, #ffffff);
+    margin-bottom: 0.5rem;
+    font-size: 0.875rem;
+}
+
+.cyber-form input,
+.cyber-form select,
+.cyber-form textarea {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    background: rgba(17, 24, 39, 0.8);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 8px;
+    color: var(--cyber-text-light, #f3f4f6);
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+.cyber-form input:focus,
+.cyber-form select:focus,
+.cyber-form textarea:focus {
+    outline: none;
+    border-color: var(--cyber-accent, #f59e0b);
+    box-shadow: 0 0 0 3px rgba(245, 158, 11, 0.1);
+    background: rgba(17, 24, 39, 0.9);
+}
+
+.cyber-form textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+/* Contact CTA Section */
+.cyber-contact-cta {
+    padding: 80px 0;
+    background: linear-gradient(135deg, #0a0a0a 0%, #1a1a2e 100%);
+    position: relative;
+    text-align: center;
+}
+
+.cta-buttons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    margin-top: 2rem;
+}
+
+.btn-secondary {
+    background: transparent;
+    border: 2px solid var(--cyber-accent, #f59e0b);
+    color: var(--cyber-accent, #f59e0b);
+    padding: 0.75rem 2rem;
+    font-weight: 600;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn-secondary:hover {
+    background: var(--cyber-accent, #f59e0b);
+    color: #1f2937;
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px rgba(245, 158, 11, 0.3);
+}
+
+/* ================================
+   Cyber Services Page Styles
+   ================================ */
+
+/* Services Hero Section */
+.cyber-services-hero {
+    min-height: 70vh;
+    position: relative;
+    display: flex;
+    align-items: center;
+    background: linear-gradient(135deg, #0a0a0a 0%, #1a1a2e 100%);
+    overflow: hidden;
+}
+
+/* Services Main Section */
+.cyber-services-main {
+    padding: 80px 0;
+    background: linear-gradient(135deg, #0a0a0a 0%, #1a1a2e 50%, #0a0a0a 100%);
+    position: relative;
+    overflow: hidden;
+}
+
+.cyber-services-main::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800"><defs><pattern id="services-dots" width="40" height="40" patternUnits="userSpaceOnUse"><circle cx="20" cy="20" r="1" fill="rgba(0,212,255,0.1)"/></pattern></defs><rect width="100%" height="100%" fill="url(%23services-dots)"/></svg>') center/cover;
+    opacity: 0.3;
+}
+
+.service-card.featured {
+    background: rgba(31, 41, 55, 0.8);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    padding: 3rem;
+    margin-bottom: 4rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.service-card.featured::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, transparent, var(--cyber-accent, #f59e0b), transparent);
+}
+
+.service-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 2rem;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.service-header h3 {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--cyber-text-primary, #ffffff);
+    margin: 0;
+}
+
+.service-price {
+    background: var(--cyber-accent, #f59e0b);
+    color: #1f2937;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-weight: 600;
+    font-size: 0.875rem;
+}
+
+.service-description {
+    margin-bottom: 2rem;
+}
+
+.service-description p {
+    font-size: 1.125rem;
+    line-height: 1.7;
+    color: var(--cyber-text-light, #d1d5db);
+    margin-bottom: 1.5rem;
+}
+
+.service-features {
+    margin-bottom: 2rem;
+}
+
+.service-features h4 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--cyber-text-primary, #ffffff);
+    margin-bottom: 1rem;
+}
+
+.service-features ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.service-features li {
+    color: var(--cyber-text-light, #d1d5db);
+    padding: 0.5rem 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    position: relative;
+    padding-left: 2rem;
+}
+
+.service-features li::before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    color: var(--cyber-accent, #f59e0b);
+    font-weight: bold;
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.services-grid .service-card {
+    background: rgba(31, 41, 55, 0.8);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    padding: 2rem;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.services-grid .service-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--cyber-accent, #f59e0b);
+    box-shadow: 0 10px 30px rgba(245, 158, 11, 0.2);
+}
+
+.services-grid .service-icon {
+    width: 60px;
+    height: 60px;
+    background: var(--cyber-accent, #f59e0b);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1.5rem;
+    color: #1f2937;
+}
+
+.services-grid .service-card h3 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--cyber-text-primary, #ffffff);
+    margin-bottom: 1rem;
+}
+
+.services-grid .service-card p {
+    color: var(--cyber-text-light, #d1d5db);
+    line-height: 1.6;
+}
+
+/* Case Studies Section */
+.cyber-case-studies {
+    padding: 80px 0;
+    background: linear-gradient(135deg, #0a0a0a 0%, #1a1a2e 100%);
+    position: relative;
+}
+
+.section-intro {
+    text-align: center;
+    font-size: 1.125rem;
+    color: var(--cyber-text-light, #d1d5db);
+    margin-bottom: 3rem;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.case-study-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.case-study-card {
+    background: rgba(31, 41, 55, 0.8);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    padding: 2.5rem;
+    transition: all 0.3s ease;
+}
+
+.case-study-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--cyber-accent, #f59e0b);
+    box-shadow: 0 10px 30px rgba(245, 158, 11, 0.2);
+}
+
+.case-study-header {
+    margin-bottom: 2rem;
+}
+
+.case-study-header h3 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--cyber-text-primary, #ffffff);
+    margin-bottom: 0.5rem;
+}
+
+.case-study-type {
+    background: var(--cyber-accent, #f59e0b);
+    color: #1f2937;
+    padding: 0.25rem 0.75rem;
+    border-radius: 12px;
+    font-size: 0.875rem;
+    font-weight: 600;
+    display: inline-block;
+}
+
+.case-study-content .problem,
+.case-study-content .process,
+.case-study-content .outcome {
+    margin-bottom: 1.5rem;
+}
+
+.case-study-content h4 {
+    font-size: 1.125rem;
+    font-weight: 600;
+    color: var(--cyber-accent, #f59e0b);
+    margin-bottom: 0.75rem;
+}
+
+.case-study-content p {
+    color: var(--cyber-text-light, #d1d5db);
+    line-height: 1.6;
+    margin-bottom: 0;
+}
+
+.case-study-highlight {
+    background: rgba(245, 158, 11, 0.1);
+    border: 1px solid rgba(245, 158, 11, 0.3);
+    border-radius: 8px;
+    padding: 1rem;
+    margin-top: 1.5rem;
+    color: var(--cyber-text-light, #d1d5db);
+    font-size: 0.875rem;
+    line-height: 1.5;
+}
+
+.case-study-highlight strong {
+    color: var(--cyber-accent, #f59e0b);
+}
+
+/* Services CTA Section */
+.cyber-services-cta {
+    padding: 80px 0;
+    background: linear-gradient(135deg, #0a0a0a 0%, #1a1a2e 50%, #0a0a0a 100%);
+    position: relative;
+    text-align: center;
+    overflow: hidden;
+}
+
+.cyber-services-cta::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800"><defs><pattern id="cta-dots" width="40" height="40" patternUnits="userSpaceOnUse"><circle cx="20" cy="20" r="1" fill="rgba(0,212,255,0.1)"/></pattern></defs><rect width="100%" height="100%" fill="url(%23cta-dots)"/></svg>') center/cover;
+    opacity: 0.3;
+}
+
+/* Responsive Contact & Services Pages */
+@media (max-width: 968px) {
+    .contact-grid {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+    }
+    
+    .case-study-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .service-header {
+        text-align: center;
+    }
+    
+    .service-header h3 {
+        font-size: 1.75rem;
+    }
+    
+    .cta-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media (max-width: 640px) {
+    .cyber-contact-hero,
+    .cyber-services-hero {
+        min-height: 60vh;
+        padding: 60px 0;
+    }
+    
+    .contact-form,
+    .case-study-card,
+    .service-card.featured {
+        padding: 2rem;
+    }
+    
+    .services-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .contact-method {
+        padding: 1rem;
+    }
+    
+    .contact-method .contact-icon {
+        width: 40px;
+        height: 40px;
+    }
+    
+    /* Contact Hero Responsive */
+    .cyber-contact-hero .hero-content {
+        max-width: 100%;
+    }
+    
+    .cyber-contact-hero .contact-info {
+        padding: 1.5rem;
+        margin-top: 1.5rem;
+        max-width: 100%;
+    }
+    
+    .cyber-contact-hero .contact-methods {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        gap: 0.75rem;
+    }
+    
+    .cyber-contact-hero .contact-method {
+        padding: 0.75rem;
+    }
+}
+
+/* Additional mobile breakpoint for very small screens */
+@media (max-width: 480px) {
+    .cyber-contact-hero .contact-methods {
+        grid-template-columns: 1fr;
+        gap: 0.75rem;
+    }
+}
