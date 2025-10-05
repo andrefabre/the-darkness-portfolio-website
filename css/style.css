@@ -3569,6 +3569,45 @@ footer p {
     min-height: 120px;
 }
 
+/* Light Form Styles */
+.light-form .form-group {
+    margin-bottom: 1.5rem;
+}
+
+.light-form label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: var(--text-primary, #1f2937);
+    font-weight: 500;
+    font-size: 0.875rem;
+}
+
+.light-form input,
+.light-form select,
+.light-form textarea {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid var(--border-color, #d1d5db);
+    border-radius: 8px;
+    background: var(--background-primary, #ffffff);
+    color: var(--text-primary, #1f2937);
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+.light-form input:focus,
+.light-form select:focus,
+.light-form textarea:focus {
+    outline: none;
+    border-color: var(--primary-color, #2563eb);
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+}
+
+.light-form textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
 /* Contact CTA Section */
 .cyber-contact-cta {
     padding: 80px 0;
@@ -4429,6 +4468,20 @@ footer p {
 
 /* Light Theme Responsive Design */
 @media (max-width: 768px) {
+    .nav-controls {
+        gap: 0.5rem;
+    }
+    
+    .theme-toggle {
+        width: 36px;
+        height: 36px;
+    }
+    
+    .theme-icon {
+        width: 18px;
+        height: 18px;
+    }
+    
     .light-hero h1 {
         font-size: 2.5rem;
     }
@@ -4490,6 +4543,8 @@ footer p {
     cursor: pointer;
     transition: all 0.3s ease;
     position: relative;
+    padding: 0;
+    outline: none;
 }
 
 .theme-toggle:hover {

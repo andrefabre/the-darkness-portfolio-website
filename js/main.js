@@ -326,6 +326,13 @@ class ThemeToggle {
                 el.classList.add(`${prefix}${section}`);
             });
         });
+        
+        // Handle form classes
+        const forms = document.querySelectorAll('.cyber-form, .light-form');
+        forms.forEach(form => {
+            form.classList.remove('cyber-form', 'light-form');
+            form.classList.add(isLight ? 'light-form' : 'cyber-form');
+        });
     }
     
     toggleTheme() {
