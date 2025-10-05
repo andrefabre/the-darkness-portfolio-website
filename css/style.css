@@ -4286,6 +4286,51 @@ footer p {
     margin-bottom: 1rem;
 }
 
+/* Light Theme Skill Cards */
+.light-services .skill-card {
+    background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+    color: white;
+    border: none;
+    border-radius: 12px;
+    padding: 2rem;
+    text-align: center;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(37, 99, 235, 0.3);
+}
+
+.light-services .skill-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(37, 99, 235, 0.4);
+}
+
+.light-services .skill-card h3 {
+    color: white;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    font-size: 1.25rem;
+}
+
+.light-services .skill-card p {
+    color: rgba(255, 255, 255, 0.9);
+    margin-bottom: 0;
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
+
+.light-services .skill-card .skill-icon,
+.light-services .skill-card.highlighted .skill-icon {
+    color: #1f2937 !important;
+    background: #f59e0b !important;
+    margin-bottom: 1rem;
+    width: 60px;
+    height: 60px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1.5rem;
+}
+
 /* Light Theme CTA Section */
 .light-cta {
     background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
@@ -4361,6 +4406,13 @@ footer p {
     padding-top: 20px;
     margin-top: 30px;
     text-align: center;
+}
+
+/* Light Theme Experience Cards - Better Text Readability */
+.light-theme .experience-item p {
+    color: var(--text-primary, #1f2937) !important;
+    font-weight: 500;
+    line-height: 1.6;
 }
 
 /* Light Theme Responsive Design */
