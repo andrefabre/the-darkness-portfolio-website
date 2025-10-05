@@ -239,3 +239,125 @@ style.textContent = `
     }
 `;
 document.head.appendChild(style);
+
+// Theme Toggle Functionality
+class ThemeToggle {
+    constructor() {
+        this.themeKey = 'preferred-theme';
+        this.init();
+    }
+    
+    init() {
+        // Load saved theme or default to dark
+        const savedTheme = localStorage.getItem(this.themeKey);
+        const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+        const defaultTheme = savedTheme || (prefersDark ? 'cyber-theme' : 'light-theme');
+        
+        this.setTheme(defaultTheme);
+        this.bindEvents();
+        this.updateToggleIcon();
+    }
+    
+    bindEvents() {
+        // Bind theme toggle buttons on all pages
+        const toggleButtons = document.querySelectorAll('#themeToggle');
+        toggleButtons.forEach(button => {
+            button.addEventListener('click', () => this.toggleTheme());
+        });
+        
+        // Listen for system theme changes
+        window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', (e) => {
+            if (!localStorage.getItem(this.themeKey)) {
+                this.setTheme(e.matches ? 'cyber-theme' : 'light-theme');
+                this.updateToggleIcon();
+            }
+        });
+    }
+    
+    getCurrentTheme() {
+        return document.body.classList.contains('light-theme') ? 'light-theme' : 'cyber-theme';
+    }
+    
+    setTheme(theme) {
+        // Remove all theme classes
+        document.body.classList.remove('cyber-theme', 'light-theme');
+        
+        // Add the new theme class
+        document.body.classList.add(theme);
+        
+        // Update navigation classes to match theme
+        const nav = document.querySelector('nav');
+        if (nav) {
+            nav.classList.remove('cyber-nav', 'light-nav');
+            nav.classList.add(theme === 'light-theme' ? 'light-nav' : 'cyber-nav');
+        }
+        
+        // Update main container classes to match theme
+        const main = document.querySelector('main');
+        if (main) {
+            main.classList.remove('cyber-main', 'light-main');
+            main.classList.add(theme === 'light-theme' ? 'light-main' : 'cyber-main');
+        }
+        
+        // Update all sections to match theme
+        this.updateSectionClasses(theme);
+        
+        // Save theme preference
+        localStorage.setItem(this.themeKey, theme);
+        
+        // Update toggle icon
+        this.updateToggleIcon();
+    }
+    
+    updateSectionClasses(theme) {
+        const isLight = theme === 'light-theme';
+        const prefix = isLight ? 'light-' : 'cyber-';
+        
+        // Map of section class conversions
+        const sectionMappings = [
+            'hero', 'services', 'about', 'portfolio', 'contact', 'cta', 
+            'why-matters', 'beyond-software', 'partner', 'footer'
+        ];
+        
+        sectionMappings.forEach(section => {
+            const elements = document.querySelectorAll(`.${isLight ? 'cyber-' : 'light-'}${section}`);
+            elements.forEach(el => {
+                el.classList.remove(`cyber-${section}`, `light-${section}`);
+                el.classList.add(`${prefix}${section}`);
+            });
+        });
+    }
+    
+    toggleTheme() {
+        const currentTheme = this.getCurrentTheme();
+        const newTheme = currentTheme === 'cyber-theme' ? 'light-theme' : 'cyber-theme';
+        this.setTheme(newTheme);
+    }
+    
+    updateToggleIcon() {
+        const currentTheme = this.getCurrentTheme();
+        const toggleButtons = document.querySelectorAll('#themeToggle');
+        
+        toggleButtons.forEach(button => {
+            const sunIcon = button.querySelector('.sun-icon');
+            const moonIcon = button.querySelector('.moon-icon');
+            
+            if (currentTheme === 'light-theme') {
+                // Show moon icon (dark mode option)
+                sunIcon.style.display = 'none';
+                moonIcon.style.display = 'block';
+                button.title = 'Switch to dark theme';
+            } else {
+                // Show sun icon (light mode option)  
+                sunIcon.style.display = 'block';
+                moonIcon.style.display = 'none';
+                button.title = 'Switch to light theme';
+            }
+        });
+    }
+}
+
+// Initialize theme toggle when DOM is loaded
+document.addEventListener('DOMContentLoaded', () => {
+    new ThemeToggle();
+});
