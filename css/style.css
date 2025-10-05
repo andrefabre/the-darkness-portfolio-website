@@ -4415,6 +4415,18 @@ footer p {
     line-height: 1.6;
 }
 
+/* Light Theme Service Cards - Better Text Readability */
+.light-theme .service-card p {
+    color: var(--text-primary, #1f2937) !important;
+    font-weight: 500;
+}
+
+.light-theme .service-description p {
+    color: var(--text-primary, #1f2937) !important;
+    font-weight: 500;
+    line-height: 1.7;
+}
+
 /* Light Theme Responsive Design */
 @media (max-width: 768px) {
     .light-hero h1 {
